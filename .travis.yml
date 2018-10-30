@@ -1,0 +1,14 @@
+language: csharp
+mono: none
+dotnet: 2.1.301
+before_script: cd Billing.EndPoint
+script:
+ - dotnet restore
+deploy:
+   provider: cloudfoundry
+   username: jhonatantiradotiradodeep@gmail.com
+   password:
+    secure: "aiKJdiklv7aGTuCQqxJHqieUWd1YX8voUTQi5X3on589nw1bcqrUk0bRNuc0/kHL540tICDA8wCy6+G/1cC01WIxx4BeC1A6dJkkqzeSt5VlIWNU3SuGencRKzjbC2wbZ7Z4HsdCDR3z7ZOP2YFg76L+kL12n3hl1qbXvK77sWIZIpHrC80WOtjRpZi/BJVrsce84G65m6Lo1vKyt5D7mmU0oHdhZnK8aygsKiFQ/MytgDkumMytiOrHBxDTtKB+o2ngBU0qRAeizJGo9WJxKlquHb6ocoH1ktEbVMcQ5c/ZLpO+H6vXgbyVyQYTeZyFd4f6trPoJ2L0LVlZSgJwBTECpPBxelrT9beAls48pdojDoxjoDXrgEyOUN3lKxNf30x6ZT0jt9C0YlNa/EptEPwo2B8y1PNOyTiVlwuGZH5Qn/3AV2+Rcrmz9zzlTYd979w0j777xOjRQLO1ZcNcGU7dh+AjDYpO5kj4YDDfFrF1wqTnXcqfRQ7JYoFfWipqtD66XNQSLcThbHCPNquffei8pHgAIRevx6brHQqFrrAkmcGC5izPgrg6NoNpuG8oxxhu2MQKbiclk41NJBrl+CtU+1McJ04tCihKQ4u+mZrk5ytYfi8ZGoIW0VFlkyJuHBurffinnicA+vi6DCDIk6nwn3Ys1OpUQ3T2jsHOayw="
+   api: https://api.run.pivotal.io
+   organization: kipubit
+   space: development
